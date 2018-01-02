@@ -150,6 +150,8 @@ class _CallbackGroup(object):
         return remover
 
     def _remove(self, callback, callbacks):
+        import time
+        time.sleep(0.001)
         self._error_on_double_remove(callback, callbacks)
         callbacks[callback]()
 
